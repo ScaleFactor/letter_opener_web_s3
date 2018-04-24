@@ -2,6 +2,9 @@ module LetterOpenerWebS3::LetterExtension
   extend ActiveSupport::Concern
 
   included do
+    cattr_accessor :letters_location do
+      LetterOpenerWeb::Letter.letters_location
+    end
 
     class << self
       def search
