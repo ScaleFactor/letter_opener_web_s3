@@ -3,7 +3,7 @@ module LetterOpenerWebS3::LetterExtension
 
   included do
     cattr_accessor :letters_location do
-      LetterOpenerWeb::Letter.letters_location
+      LetterOpenerWeb.config.letters_location
     end
 
     class << self
