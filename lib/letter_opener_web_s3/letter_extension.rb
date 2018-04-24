@@ -2,9 +2,6 @@ module LetterOpenerWebS3::LetterExtension
   extend ActiveSupport::Concern
 
   included do
-    cattr_accessor :letters_location do
-      "#{%w(tmp letter_opener).join('/')}/"
-    end
 
     class << self
       def search
